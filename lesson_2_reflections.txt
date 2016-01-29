@@ -1,0 +1,8 @@
+
+Q: What happens when you initialize a repository? Why do you need to do it?
+
+A: It turns the folder you ran git init in into a local new repo. A .git folder is created to store this repositories metadata (i.e. file tracking info). Until this command is run there is no place to store the metadata. After doing this the files can be committed.
+
+Q: How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+A: Staging area differs in that it is neither completely tracked nor untracked. Its value lies in the ability to selectively commit certain files instead of every file within the working directory. It is like a selected subset of the working directory that is not tracked and the revision level.
