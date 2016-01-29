@@ -1,0 +1,15 @@
+Q: How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+A: By showing which lines changed I can quickly take a look at only those differences to identify mistakes made while changing from a working baseline. It also helps when the changes are put right next to each other.
+
+Q: How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+A: It allows you to view/analyze/debug incremental changes and rollback to previous good baselines. This can save lots of valuable debugging/development time.
+
+Q: What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+
+A: Manual commits have one major advantage in that the user has more control on when to commit changes and thus can choose commit points that limit code  change to more logical differences. However, it also lends to the possibility of over or under commiting. 
+
+Q: Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+A: Git saves multiple files in one committ due to the nature of code changes. Some changes require changing multiple files and grouping them logically into one committ makes a lot of sense, that way these related channges can be tracked together. Google Docs, however, is designed mostly for single document editing and thus does not make any sense to commit files together.
