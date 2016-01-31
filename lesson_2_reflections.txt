@@ -6,3 +6,23 @@ A: It turns the folder you ran git init in into a local new repo. A .git folder 
 Q: How is the staging area different from the working directory and the repository? What value do you think it offers?
 
 A: Staging area differs in that it is neither completely tracked nor untracked. Its value lies in the ability to selectively commit certain files instead of every file within the working directory. It is like a selected subset of the working directory that is not tracked and the revision level.
+
+Q: How can you use the staging area to make sure you have one commit per logical change?
+
+A: I can use a git diff --staged command to diff against the most recent commit I am checked-out too in my repo. I can the make sure that those changes are all part of one logical commit. Or as I am adding changes in working directory I can diff against stage  before I add it to make sure.
+
+Q: What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+A: A couple of situations that would often occur would be when your product line has different versions or customer specific versions, this would allow them to exist on specific branches. Or when you need to work on development with a known good baseline and do not want any other additionnal commits from others to affect your work.
+
+Q: How do the diagrams help you visualize the branch structure?
+
+A: Diagrams can help show the complicated non-linear structure of branching and how they are related to commits. It can show how you can make commits that aren't associated with any branch and thus can be completely lost once you  switch to another branch and do not record this id. 
+
+Q: What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+A: End result is a combination of all the changes since the latest common commit between the two branches. This results in a merge and two branches become one, the newest merge commit thus has two parents, the two latest commits of the two merged branches. Which is also what the diagram conceptually shows.
+
+Q: What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+A: Automatic merging obviously saves time and is convenient but also b/c automated algorithms can never know the codebase as well as the developer, its invevitable that an  error or bug may be introduced by the auto merge.
