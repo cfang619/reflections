@@ -1,3 +1,23 @@
 Q: When would you want to use a remote repository rather than keeping all your work local?
 
 A: When multiple contributors/developers work on same project, a remote location allows everyone to work onn same code base. Also if you work on the same code on multiple workstations, this allows you to pull and sync to any of your workstations.
+
+Q: Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+
+A: B/c sometimes the remote might not always be in a good shape annd  your changes may also conflict with channges  that were made in the remote respository. It also limits the changes you might see in your files as you are developing, you probably do not want to suddenly see a ton of diffs appear in your files while git automatically updates.
+
+Q: Describe the differences between forks, clones, and branches. When would you use one instead of another?
+
+A: Forks are remote copies on github of someone elses repository. It is similar to a clone but still maintains a branchinng aspect in that this fork can be tracked back to the original repo it was forked from. Clones are simply copies of a repository, all of its commits, status, etc. A branch is a seperate linear flow of commits existinng withinnn a single repository.
+
+Q: What is the benefit of having a copy of the last known state of the remote stored locally?
+
+A: It allows you to quickly check how far out of sync or ahead you are from the last pull request you made from the remote even if you do not have innternet access. This means you also no the commit  that you branched away from the remote and allows you to merge when you fetch the latest state.
+
+Q: How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+
+A: I would have to copy a codebase from some directory and whenever I want to make changes I would have to diff against that file and manually merge. After making sure its merged correctly I would then replace that file. It seems to be much harder to do it this way.
+
+Q: When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+
+A: When I want to make a change in a collaborative project that involves a product line master that can't have bugs. This can let me use pull requests to eventually move by change into mainline but also allows me to collect reviews from others. This is obviously a more round about route and may cause issues such as merge conflicts if other people are pushing there branches too at the same time. Making changes directly into master makes more sense for individual projects that can be tracked easily by ones self.
